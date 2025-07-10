@@ -1,13 +1,7 @@
 import './globals.css'
-<<<<<<< HEAD
-import { ThemeProvider } from '@/components/themeProvider'
-import Navbar from '@/components/navbar'
-import Footer from '@/components/footer'
-=======
 import { ThemeProvider } from '@/components/ThemeProvider'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
->>>>>>> 7db60b6b3e53747a86cf72b044bd89b1c68af77c
 
 export const metadata = {
   title: 'My Portfolio',
