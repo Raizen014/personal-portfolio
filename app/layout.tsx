@@ -1,7 +1,7 @@
 import './globals.css'
-import { ThemeProvider } from '@/components/themeProvider'
-import Navbar from '@/components/navbar'
-import Footer from '@/components/footer'
+import { ThemeProvider } from '@/components/ThemeProvider'
+import Navbar from '@/components/Navbar'
+import Footer from '@/components/Footer'
 
 export const metadata = {
   title: 'My Portfolio',
