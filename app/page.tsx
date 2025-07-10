@@ -80,14 +80,20 @@ export default function Home() {
           >
             About Me
           </motion.h2>
-          <p className="text-sm md:text-base leading-relaxed text-gray-700 dark:text-gray-300">
+          <motion.p 
+            className="text-sm md:text-base leading-relaxed text-gray-700 dark:text-gray-300"
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.8 }}
+            viewport={{ once: true }}
+            >
             I’m a detail-oriented IT graduate specializing in <strong>UI/UX design</strong> and <strong>front-end development</strong>.
             I’ve built a strong foundation in design principles, accessibility, and responsive design, and I’m continuously improving through self-led projects and study.
             <br /><br />
             I work with tools like <strong>Figma</strong>, <strong>HTML</strong>, <strong>CSS</strong>, and <strong>JavaScript</strong> to create intuitive user experiences that are both functional and visually engaging. My goal is to design clean, thoughtful interfaces that prioritize usability and clarity.
             <br /><br />
             I’m currently seeking opportunities where I can apply and grow my skills in a real-world design environment, collaborate with other creatives, and continue learning in a team-driven space.
-          </p>
+          </motion.p>
         </div>
 
         <motion.div
