@@ -118,7 +118,7 @@ export default function Home() {
         <h2 className="text-3xl font-bold mb-6 text-accent">Projects</h2>
         <p className="text-lg text-gray-600 mb-8">Soon to be added: personal UI/UX case studies and web apps!</p>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
-          <div className="card bg-white shadow-md p-6 rounded-lg">Project 1</div>
+          <div className="card bg-white shadow-md p-6 rounded-lg">Project 132</div>
           <div className="card bg-white shadow-md p-6 rounded-lg">Project 2</div>
         </div>
       </div>
