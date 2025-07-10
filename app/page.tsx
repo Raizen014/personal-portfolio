@@ -66,7 +66,11 @@ export default function Home() {
       </div>
 
       {/* ===== About Section ===== */}
+<<<<<<< HEAD
       <div id="about" className="min-h-screen flex justify-center py-24   md:p-24 bg-base-100 gap-10">
+=======
+      <div id="about" className="min-h-screen flex px-10 py-24 md:p-24 bg-base-100 gap-10">
+>>>>>>> 7db60b6b3e53747a86cf72b044bd89b1c68af77c
         <div className="w-[70%]">
         <motion.h2 
           className="text-3xl font-bold mb-6 text-accent"

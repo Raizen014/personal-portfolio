@@ -1,5 +1,9 @@
 'use client'
+<<<<<<< HEAD
 import { useTheme } from '@/components/themeProvider'
+=======
+import { useTheme } from '@/components/ThemeProvider'
+>>>>>>> 7db60b6b3e53747a86cf72b044bd89b1c68af77c
 import Image from 'next/image'
 import { useState } from 'react'
 
