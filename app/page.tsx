@@ -95,33 +95,26 @@ export default function Home() {
             viewport={{ once: true }}
           >
 
-            I’m a detail-oriented IT graduate specializing in <strong>UI/UX design</strong> and <strong>front-end development</strong>.
-            I’ve built a strong foundation in design principles, accessibility, and responsive design, and I’m continuously improving through self-led projects and study.
+            I'm a detail-oriented IT graduate with a focus on UI/UX design and front-end development.
+            I have a solid foundation in design principles, accessibility, and responsive design,
+            which I continue to strengthen through self-led projects and ongoing learning.
             <br /><br />
-            I work with tools like <strong>Figma</strong>, <strong>HTML</strong>, <strong>CSS</strong>, and <strong>JavaScript</strong> to create intuitive user experiences that are both functional and visually engaging. My goal is to design clean, thoughtful interfaces that prioritize usability and clarity.
+            Using tools like Figma, HTML, CSS, and JavaScript, I craft intuitive and engaging user experiences.
+            I aim to design clean, user-focused interfaces that balance functionality with visual clarity.
             <br /><br />
-            I’m currently seeking opportunities where I can apply and grow my skills in a real-world design environment, collaborate with other creatives, and continue learning in a team-driven space.
+            I'm seeking opportunities to apply my skills in a collaborative environment where I can grow
+            as a designer and contribute to meaningful projects.
           </motion.p>
-          <div className="mt-10">
-            <a href="#about" className="btn btn-outline">Download CV</a>
-          </div>
-          {/* <div className="flex gap-4">
-            {icons.map((item, index) => (
-              <motion.a
-                key={index}
-                href={item.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-gray-500 hover:text-accent transition text-2xl"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.4, delay: index * 0.2 }}
-                viewport={{ once: true }}
-              >
-                {item.icon}
-              </motion.a>
-            ))}
-          </div> */}
+          
+          <motion.a
+            className="btn btn-outline mt-10"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 1.2 }}
+            viewport={{ once: true }}
+          >
+            Download CV
+          </motion.a>
         </div>
 
         <motion.div
