@@ -16,64 +16,86 @@ export default function Home() {
     <section>
       {/* ===== Hero Section ===== */}
       <div
-        id="home"
-        className="min-h-screen flex flex-col md:flex-row-reverse items-center py-24 md:justify-center bg-base-200 px-6 md:px-24 gap-12 relative overflow-hidden"
-      >
-        {/* Optional abstract background blobs */}
-        <div className="absolute top-0 left-0 w-72 h-72 bg-accent opacity-10 rounded-full blur-3xl z-0" />
-        <div className="absolute bottom-0 right-0 w-72 h-72 bg-secondary opacity-10 rounded-full blur-3xl z-0" />
+      id="home"
+      className="min-h-screen flex flex-col md:flex-row-reverse items-center py-24 md:justify-center bg-base-200 px-6 md:px-24 gap-12 relative overflow-hidden"
+    >
+      {/* Background Blobs */}
+      <div className="absolute top-0 left-0 w-72 h-72 bg-accent opacity-10 rounded-full blur-3xl z-0" />
+      <div className="absolute bottom-0 right-0 w-72 h-72 bg-secondary opacity-10 rounded-full blur-3xl z-0" />
 
-        <motion.div
-          initial={{ opacity: 0, y: 100 }}
+      {/* Content Section */}
+      <div className="w-full md:w-1/2 flex flex-col items-center mt-16 md:mt-0 text-start z-10">
+        <motion.h1
+          initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
           viewport={{ once: true }}
-          className="w-full md:w-1/2 flex flex-col items-center mt-16 md:mt-0 text-start z-10"
+          className="text-4xl md:text-5xl font-bold mb-8"
         >
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">
-            Hi, I'm <span className="text-accent">Aeron Garcia</span>
-          </h1>
-          <p className="text-sm md:text-md leading-relaxed mb-6 max-w-xl">
-            An IT graduate with a growing interest in <strong>UI/UX design</strong> and <strong>front-end</strong> development.
-            I have a solid understanding of design fundamentals and am currently sharpening my skills
-            in Figma, HTML, CSS, and JavaScript through hands-on practice. I'm passionate about creating
-            clean, simple, and user-friendly interfaces — and I'm excited to continue learning and growing in this field.
-          </p>
-          <div className="flex flex-wrap gap-4">
-            <a href="#projects" className="btn btn-accent">View My Work</a>
-            <a href="#about" className="btn btn-outline">Download CV</a>
-          </div>
-          <div className="flex gap-2 mt-6">
-            <a 
-              href="https://www.facebook.com/norea.aicrag.3/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-gray-500 hover:text-blue-600 transition"
-              aria-label="Facebook"
-            >
-              <FaFacebook className="w-8 h-8" />
-            </a>
-            <a 
-              href="https://www.instagram.com/aerongarciaaa"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-gray-500 hover:text-pink-500 transition"
-              aria-label="Instagram"
-            >
-              <FaInstagram className="w-8 h-8" />
-            </a>
-            <a 
-              href="https://www.linkedin.com/in/aerongarciaaa/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-gray-500 hover:text-blue-600 transition"
-              aria-label="LinkedIn"
-            >
-              <FaLinkedin className="w-8 h-8" />
-            </a>
-          </div>
+          Hi, I'm <span className="text-accent">Aeron Garcia</span>
+        </motion.h1>
+
+        <motion.p
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.4 }}
+          viewport={{ once: true }}
+          className="text-sm md:text-md leading-relaxed mb-6 max-w-xl"
+        >
+          An IT graduate with a growing interest in <strong>UI/UX design</strong> and <strong>front-end</strong> development.
+          I have a solid understanding of design fundamentals and am currently sharpening my skills
+          in Figma, HTML, CSS, and JavaScript through hands-on practice. I'm passionate about creating
+          clean, simple, and user-friendly interfaces — and I'm excited to continue learning and growing in this field.
+        </motion.p>
+
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.4 }}
+          viewport={{ once: true }}
+          className="flex flex-wrap gap-4"
+        >
+          <a href="#projects" className="btn btn-accent">View My Work</a>
+          <a href="#about" className="btn btn-outline">Download CV</a>
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.8 }}
+          viewport={{ once: true }}
+          className="flex gap-4 mt-6"
+        >
+          <a
+            href="https://www.facebook.com/norea.aicrag.3/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-gray-500 hover:text-blue-600 transition"
+            aria-label="Facebook"
+          >
+            <FaFacebook className="w-8 h-8" />
+          </a>
+          <a
+            href="https://www.instagram.com/aerongarciaaa"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-gray-500 hover:text-pink-500 transition"
+            aria-label="Instagram"
+          >
+            <FaInstagram className="w-8 h-8" />
+          </a>
+          <a
+            href="https://www.linkedin.com/in/aerongarciaaa/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-gray-500 hover:text-blue-600 transition"
+            aria-label="LinkedIn"
+          >
+            <FaLinkedin className="w-8 h-8" />
+          </a>
         </motion.div>
       </div>
+    </div>
 
       {/* ===== About Section ===== */}
       <div id="about" className="min-h-screen flex justify-center py-24 md:p-24 bg-base-100 gap-10">
@@ -88,7 +110,7 @@ export default function Home() {
             About Me
           </motion.h2>
           <motion.p 
-            className="text-sm leading-relaxed text-base-content"
+            className="text-xs md:text-sm leading-relaxed text-base-content"
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.8 }}
