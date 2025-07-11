@@ -21,7 +21,7 @@ export default function Navbar() {
             )}
 
           </div>
-          <a href="#home" className="text-xl">AeronG</a>
+          <a href="#home" className="text-xl text-accent font-medium">AeronG</a>
         </div>
       </div>
 

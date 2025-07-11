@@ -4,6 +4,13 @@ import Image from "next/image";
 import { motion, easeIn } from "framer-motion";
 import { FaFacebook, FaInstagram, FaLinkedin } from 'react-icons/fa';
 
+const icons = [
+  { icon: <FaFacebook />, href: "https://facebook.com" },
+  { icon: <FaInstagram />, href: "https://instagram.com" },
+  { icon: <FaLinkedin />, href: "https://linkedin.com" },
+
+]
+
 export default function Home() {
   return (
     <section>
@@ -81,12 +88,13 @@ export default function Home() {
             About Me
           </motion.h2>
           <motion.p 
-            className="text-sm md:text-base leading-relaxed text-gray-700 dark:text-gray-300"
+            className="text-sm leading-relaxed text-base-content"
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.8 }}
             viewport={{ once: true }}
-            >
+          >
+
             I’m a detail-oriented IT graduate specializing in <strong>UI/UX design</strong> and <strong>front-end development</strong>.
             I’ve built a strong foundation in design principles, accessibility, and responsive design, and I’m continuously improving through self-led projects and study.
             <br /><br />
@@ -94,6 +102,26 @@ export default function Home() {
             <br /><br />
             I’m currently seeking opportunities where I can apply and grow my skills in a real-world design environment, collaborate with other creatives, and continue learning in a team-driven space.
           </motion.p>
+          <div className="mt-10">
+            <a href="#about" className="btn btn-outline">Download CV</a>
+          </div>
+          {/* <div className="flex gap-4">
+            {icons.map((item, index) => (
+              <motion.a
+                key={index}
+                href={item.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-500 hover:text-accent transition text-2xl"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.4, delay: index * 0.2 }}
+                viewport={{ once: true }}
+              >
+                {item.icon}
+              </motion.a>
+            ))}
+          </div> */}
         </div>
 
         <motion.div
@@ -111,6 +139,7 @@ export default function Home() {
             className="rounded-xl shadow-xl object-cover"
           />
         </motion.div>
+        
       </div>
 
       {/* ===== Projects Section ===== */}
