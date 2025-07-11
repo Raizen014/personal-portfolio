@@ -21,7 +21,7 @@ export default function Navbar() {
             )}
 
           </div>
-          <a href="#home" className="text-xl text-accent font-medium">AeronG</a>
+          <a href="#home" className="text-xl text-accent hover:drop-shadow-glow transition duration-300 font-medium">AeronG</a>
         </div>
       </div>
 
@@ -76,7 +76,7 @@ export default function Navbar() {
           <a href="#about" className="btn btn-ghost">About</a>
           <a href="#projects" className="btn btn-ghost">Projects</a>
           <a href="#contact" className="btn btn-accent">Contact</a>
-          <label className="swap swap-rotate ">
+          <label className="swap swap-rotate mx-4 ">
             <input
               type="checkbox"
               onChange={toggleTheme}

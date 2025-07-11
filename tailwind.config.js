@@ -5,7 +5,11 @@ module.exports = {
     './components/**/*.{js,ts,jsx,tsx}',
   ],
   theme: {
-    extend: {},
+    extend: {
+      dropShadow: {
+        glow: '0 0 8px rgba(255, 255, 255, 0.4)',
+      },
+    },
   },
   plugins: [require('daisyui')],
   daisyui: {
