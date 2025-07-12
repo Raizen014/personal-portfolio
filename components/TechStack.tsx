@@ -33,9 +33,9 @@ export default function TechStack() {
             className="flex flex-col items-center"
           >
             <motion.div
-              animate={{ y: [0, -14, 0] }}
+              animate={{ y: [0, -12, 0] }}
               transition={{
-                duration: 2,
+                duration: 2.4,
                 repeat: Infinity,
                 ease: 'easeInOut',
                 delay: index * 0.1,
