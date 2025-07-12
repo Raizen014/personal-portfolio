@@ -3,13 +3,7 @@
 import Image from "next/image";
 import { motion, easeIn } from "framer-motion";
 import { FaFacebook, FaInstagram, FaLinkedin } from 'react-icons/fa';
-
-const icons = [
-  { icon: <FaFacebook />, href: "https://facebook.com" },
-  { icon: <FaInstagram />, href: "https://instagram.com" },
-  { icon: <FaLinkedin />, href: "https://linkedin.com" },
-
-]
+import TechStack from "@/components/TechStack";
 
 export default function Home() {
   return (
@@ -56,7 +50,7 @@ export default function Home() {
           className="flex flex-wrap gap-4"
         >
           <a href="#projects" className="btn btn-accent">View My Work</a>
-          <a href="#about" className="btn btn-outline">More About</a>
+          <a href="#about" className="btn btn-outline">More About Me</a>
         </motion.div>
 
         <motion.div
@@ -155,7 +149,6 @@ export default function Home() {
             Download CV
           </motion.a>
         </div>
-
         <motion.div
           initial={{ opacity: 0, x: 50 }}
           whileInView={{ opacity: 1, x: 0 }}
@@ -171,11 +164,14 @@ export default function Home() {
             className="rounded-xl shadow-xl object-cover"
           />
         </motion.div>
-        
+      </div>
+      <div id="technologies" className="bg-base-200">
+        <TechStack />
       </div>
 
+
       {/* ===== Projects Section ===== */}
-      <div id="projects" className="py-24 px-6 bg-base-200 text-center">
+      <div id="projects" className="py-24 px-6 bg-base-100 text-center">
         <h2 className="text-3xl font-bold mb-6 text-accent">Projects</h2>
         <p className="text-lg text-gray-600 mb-8">Soon to be added: personal UI/UX case studies and web apps!</p>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
@@ -185,7 +181,7 @@ export default function Home() {
       </div>
 
       {/* ===== Contact Section ===== */}
-      <div id="contact" className="py-24 px-6 bg-base-100 text-center flex items-center justify-center">
+      <div id="contact" className="py-24 px-6 bg-base-200 text-center flex items-center justify-center">
         <div className="w-full max-w-md">
           <h2 className="text-3xl font-bold mb-6 text-accent">Contact</h2>
           <form className="flex flex-col gap-4 bg-white p-8 md:p-10 rounded-xl shadow-lg text-left">
