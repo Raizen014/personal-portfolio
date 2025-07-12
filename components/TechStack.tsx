@@ -1,8 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { FaNodeJs, FaReact, FaFigma, FaPhp
-} from 'react-icons/fa'
+import { FaNodeJs, FaReact, FaFigma, FaPhp } from 'react-icons/fa'
 import {
   SiTailwindcss, SiNextdotjs, SiMysql, SiPostgresql
 } from 'react-icons/si'
@@ -29,16 +28,23 @@ export default function TechStack() {
             key={index}
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.4, delay: index * 0.1 }}
+            transition={{ duration: 0.6, delay: index * 0.1 }}
             viewport={{ once: true }}
             className="flex flex-col items-center"
           >
-            <div
+            <motion.div
+              animate={{ y: [0, -14, 0] }}
+              transition={{
+                duration: 2,
+                repeat: Infinity,
+                ease: 'easeInOut',
+                delay: index * 0.1,
+              }}
               className="w-16 h-16 rounded-full bg-base-100 shadow-md hover:scale-110 transition-transform flex items-center justify-center"
               style={{ color: item.color }}
             >
               <div className="text-2xl">{item.icon}</div>
-            </div>
+            </motion.div>
           </motion.div>
         ))}
       </div>
