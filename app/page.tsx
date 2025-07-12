@@ -56,7 +56,7 @@ export default function Home() {
           className="flex flex-wrap gap-4"
         >
           <a href="#projects" className="btn btn-accent">View My Work</a>
-          <a href="#about" className="btn btn-outline">Download CV</a>
+          <a href="#about" className="btn btn-outline">More About</a>
         </motion.div>
 
         <motion.div
@@ -98,8 +98,8 @@ export default function Home() {
     </div>
 
       {/* ===== About Section ===== */}
-      <div id="about" className="min-h-screen flex justify-center py-24 md:p-24 bg-base-100 gap-10">
-        <div className="w-[70%]">
+      <div id="about" className="min-h-screen flex justify-center py-20 md:p-24 bg-base-100 gap-10">
+        <div className="w-[70%] flex flex-col  items-center md:items-start">
           <motion.h2 
             className="text-3xl font-bold mb-6 text-accent"
             initial={{ opacity: 0, y: 50 }}
@@ -109,11 +109,26 @@ export default function Home() {
           >
             About Me
           </motion.h2>
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.4, delay: 0.5 }}
+            viewport={{ once: true }}
+            className="flex justify-center md:hidden w-full mb-6"
+          >
+            <Image
+              src="/home.png"
+              width={400}
+              height={300}
+              alt="Aeron Garcia"
+              className="rounded-xl shadow-xl object-cover w-[70%] sm:w-[60%] md:w-[80%] max-w-xs md:max-w-sm"
+            />
+          </motion.div>
           <motion.p 
-            className="text-xs md:text-sm leading-relaxed text-base-content"
+            className="text-xs md:text-sm leading-relaxed text-justify text-base-content"
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.8 }}
+            transition={{ duration: 0.6, delay: 0.8 }}
             viewport={{ once: true }}
           >
 
@@ -129,10 +144,12 @@ export default function Home() {
           </motion.p>
           
           <motion.a
+            href="/Garcia-Aeron-Resume.pdf"
+            download
             className="btn btn-outline mt-10"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 1.2 }}
+            transition={{ duration: 0.6, delay: 1.2 }}
             viewport={{ once: true }}
           >
             Download CV
@@ -144,7 +161,7 @@ export default function Home() {
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.3, delay: 0.3, ease: easeIn }}
           viewport={{ once: true }}
-          className="w-full md:w-1/2 hidden md:flex justify-center z-10"
+          className="w-full hidden md:w-1/2 md:flex justify-center z-10"
         >
           <Image
             src="/home.png"
