@@ -34,7 +34,7 @@ export default function Home() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.4 }}
           viewport={{ once: true }}
-          className="text-sm md:text-md leading-relaxed mb-6 max-w-xl"
+          className="text-sm md:text-base text-justify leading-relaxed mb-6 max-w-xl"
         >
           An IT graduate with a growing interest in <strong>UI/UX design</strong> and <strong>front-end</strong> development.
           I have a solid understanding of design fundamentals and am currently sharpening my skills
@@ -119,7 +119,7 @@ export default function Home() {
             />
           </motion.div>
           <motion.p 
-            className="text-xs md:text-sm leading-relaxed text-justify text-base-content"
+            className="text-xs md:text-base leading-relaxed text-justify text-base-content mt-10"
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.8 }}
