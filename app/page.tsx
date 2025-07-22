@@ -13,7 +13,7 @@ const projects = [
     title: "Weather App",
     description: "A modern weather app using OpenWeather API and Next.js.",
     imageSrc: "/weather-app.png",
-    link: "https://your-weather-app.vercel.app",
+    link: "https://weather-app-chi-two-27.vercel.app/",
   },
   {
     title: "Portfolio Site",
