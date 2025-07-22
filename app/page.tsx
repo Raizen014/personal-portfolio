@@ -5,6 +5,8 @@ import { motion, easeIn } from "framer-motion";
 import { FaFacebook, FaInstagram, FaLinkedin } from 'react-icons/fa';
 import TechStack from "@/components/TechStack";
 import ProjectCard from '@/components/ProjectCard'
+import emailjs from 'emailjs-com'
+import ContactForm from '@/components/ContactForm'
 
 const projects = [
   {
@@ -33,6 +35,18 @@ const projects = [
   },
   // Add more here!
 ]
+
+const sendEmail = (e: React.FormEvent) => {
+  e.preventDefault()
+  emailjs.sendForm(
+    'service_mu039io',
+    'template_tix9zqt',
+    e.target as HTMLFormElement,
+    'HcEfDTyVokSt7MuQo'
+  )
+    .then(() => alert('Message sent!'))
+    .catch((error) => console.error(error))
+}
 
 export default function Home() {
   return (
@@ -236,32 +250,8 @@ export default function Home() {
       {/* ===== Contact Section ===== */}
       <div id="contact" className="py-24 px-6 bg-base-200 text-center flex items-center justify-center">
         <div className="w-full max-w-md">
-          <h2 className="text-3xl font-bold mb-6 text-accent">Contact</h2>
-          <form 
-            className="flex flex-col gap-4 bg-white p-8 md:p-10 rounded-xl shadow-lg text-left"
-            action={"https://formsubmit.co/aerong2002@gmail.com"}
-            method="POST"
-            >
-            <input
-              type="text"
-              placeholder="Name"
-              className="input input-bordered bg-gray-200 text-black w-full"
-              required
-            />
-            <input
-              type="email"
-              placeholder="Email Address"
-              className="input input-bordered bg-gray-200 text-black w-full"
-              required
-            />
-            <textarea
-              placeholder="Your Message"
-              rows={5}
-              className="textarea bg-gray-200 text-black textarea-bordered w-full"
-              required
-            ></textarea>
-            <button type="submit" className="btn btn-accent w-full">Send Message</button>
-          </form>
+          <h2 className="text-3xl font-bold text-accent">Contact</h2>
+         <ContactForm/>
         </div>
       </div>
     </section>
