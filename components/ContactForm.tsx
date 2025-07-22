@@ -27,7 +27,7 @@ export default function ContactForm() {
   }
 
  return (
-    <div id="contact" className="py-24 px-6 bg-base-200 text-center flex items-center justify-center">
+    <div id="contact" className="py-10 px-6 bg-base-200 text-center flex items-center justify-center">
       <div className="w-full max-w-md">
         <form
           ref={form}
