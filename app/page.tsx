@@ -4,6 +4,35 @@ import Image from "next/image";
 import { motion, easeIn } from "framer-motion";
 import { FaFacebook, FaInstagram, FaLinkedin } from 'react-icons/fa';
 import TechStack from "@/components/TechStack";
+import ProjectCard from '@/components/ProjectCard'
+
+const projects = [
+  {
+    title: "Weather App",
+    description: "A modern weather app using OpenWeather API and Next.js.",
+    imageSrc: "/weather-app.png",
+    link: "https://your-weather-app.vercel.app",
+  },
+  {
+    title: "Portfolio Site",
+    description: "My personal portfolio built with Tailwind, DaisyUI, and Framer Motion.",
+    imageSrc: "/portfolio.png",
+    link: "https://your-portfolio.vercel.app",
+  },
+  {
+    title: "New Cool App",
+    description: "An AI-powered productivity tool built with Next.js and OpenAI API.",
+    imageSrc: "/ai-app.png",
+    link: "https://your-ai-app.vercel.app",
+  },
+  {
+    title: "New Cool App",
+    description: "An AI-powered productivity tool built with Next.js and OpenAI API.",
+    imageSrc: "/ai-app.png",
+    link: "https://your-ai-app.vercel.app",
+  },
+  // Add more here!
+]
 
 export default function Home() {
   return (
@@ -171,53 +200,48 @@ export default function Home() {
 
 
       {/* ===== Projects Section ===== */}
-      <div id="projects" className="py-24 px-6 bg-base-100 text-center">
+       <div id="projects" className="py-24 px-6 bg-base-100 text-center">
         <h2 className="text-3xl font-bold mb-6 text-accent">Projects</h2>
         <p className="text-lg text-gray-600 mb-8">
           Soon to be added: personal UI/UX case studies and web apps!
         </p>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
-          {/* Project Card */}
-          <div className="card bg-base-200 w-full shadow-sm">
-            <figure className="relative w-full h-52 overflow-hidden">
-              <Image
-                src="/weather-app.png"
-                alt="Weather App"
-                fill
-                className="object-cover"
-              />
-              <a
-                href="https://weather-app-chi-two-27.vercel.app/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="absolute bottom-2 right-2 bg-accent text-white px-4 py-1 text-sm rounded-lg shadow hover:bg-accent-focus transition z-10"
+        {/* Scrollable container */}
+        <div className="overflow-x-auto">
+          <motion.div
+            className="flex gap-4 px-4 py-6 w-max snap-x snap-mandatory"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            transition={{ staggerChildren: 0.2 }}
+          >
+            {projects.map((project, index) => (
+              <motion.div
+                key={index}
+                className="snap-start shrink-0 w-[80vw] sm:w-[60vw] md:w-[40vw] lg:w-[30vw]"
+                variants={{
+                  hidden: { opacity: 0, y: 30 },
+                  visible: { opacity: 1, y: 0, transition: { duration: 0.4 } }
+                }}
               >
-                Live Demo
-              </a>
-            </figure>
-
-            <div className="card-body">
-              <h2 className="card-title">Weather App</h2>
-              <p className="text-justify">
-                A basic weather app that lets users search for a city and view current temperature, humidity, wind speed, and rain using live data from OpenWeatherMap.
-              </p>
-              <div className="card-actions justify-end flex-wrap">
-                <div className="badge badge-outline badge-accent">Next.js</div>
-                <div className="badge badge-outline badge-accent">Tailwind</div>
-                <div className="badge badge-outline badge-accent">Framer Motion</div>
-              </div>
-            </div>
-          </div>
+                <ProjectCard {...project} />
+              </motion.div>
+            ))}
+          </motion.div>
         </div>
       </div>
+
 
 
       {/* ===== Contact Section ===== */}
       <div id="contact" className="py-24 px-6 bg-base-200 text-center flex items-center justify-center">
         <div className="w-full max-w-md">
           <h2 className="text-3xl font-bold mb-6 text-accent">Contact</h2>
-          <form className="flex flex-col gap-4 bg-white p-8 md:p-10 rounded-xl shadow-lg text-left">
+          <form 
+            className="flex flex-col gap-4 bg-white p-8 md:p-10 rounded-xl shadow-lg text-left"
+            action={"https://formsubmit.co/aerong2002@gmail.com"}
+            method="POST"
+            >
             <input
               type="text"
               placeholder="Name"
