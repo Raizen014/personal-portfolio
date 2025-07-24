@@ -5,7 +5,6 @@ import { motion, easeIn } from "framer-motion";
 import { FaFacebook, FaInstagram, FaLinkedin } from 'react-icons/fa';
 import TechStack from "@/components/TechStack";
 import ProjectCard from '@/components/ProjectCard'
-import emailjs from 'emailjs-com'
 import ContactForm from '@/components/ContactForm'
 
 const projects = [
@@ -36,17 +35,6 @@ const projects = [
   // Add more here!
 ]
 
-const sendEmail = (e: React.FormEvent) => {
-  e.preventDefault()
-  emailjs.sendForm(
-    'service_mu039io',
-    'template_tix9zqt',
-    e.target as HTMLFormElement,
-    'HcEfDTyVokSt7MuQo'
-  )
-    .then(() => alert('Message sent!'))
-    .catch((error) => console.error(error))
-}
 
 export default function Home() {
   return (
