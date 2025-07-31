@@ -15,10 +15,10 @@ const projects = [
     link: "https://weather-app-chi-two-27.vercel.app/",
   },
   {
-    title: "Portfolio Site",
+    title: "Music Player",
     description: "My personal portfolio built with Tailwind, DaisyUI, and Framer Motion.",
     imageSrc: "/portfolio.png",
-    link: "https://your-portfolio.vercel.app",
+    link: "https://music-player-mu-nine-50.vercel.app/",
   },
   {
     title: "New Cool App",
