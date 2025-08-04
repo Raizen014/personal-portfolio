@@ -4,8 +4,8 @@ import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 
 export const metadata = {
-  title: 'My Portfolio',
-  description: 'UI/UX Portfolio Site',
+  title: 'Aeron Garcia',
+  description: 'Personal Portfolio of Aeron Garcia',
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
